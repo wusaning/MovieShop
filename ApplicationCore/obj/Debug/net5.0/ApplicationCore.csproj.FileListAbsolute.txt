@@ -1,0 +1,12 @@
+/Users/lbq/Projects/MovieShop/ApplicationCore/bin/Debug/net5.0/ApplicationCore.deps.json
+/Users/lbq/Projects/MovieShop/ApplicationCore/bin/Debug/net5.0/ApplicationCore.dll
+/Users/lbq/Projects/MovieShop/ApplicationCore/bin/Debug/net5.0/ref/ApplicationCore.dll
+/Users/lbq/Projects/MovieShop/ApplicationCore/bin/Debug/net5.0/ApplicationCore.pdb
+/Users/lbq/Projects/MovieShop/ApplicationCore/obj/Debug/net5.0/ApplicationCore.csproj.AssemblyReference.cache
+/Users/lbq/Projects/MovieShop/ApplicationCore/obj/Debug/net5.0/ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lbq/Projects/MovieShop/ApplicationCore/obj/Debug/net5.0/ApplicationCore.AssemblyInfoInputs.cache
+/Users/lbq/Projects/MovieShop/ApplicationCore/obj/Debug/net5.0/ApplicationCore.AssemblyInfo.cs
+/Users/lbq/Projects/MovieShop/ApplicationCore/obj/Debug/net5.0/ApplicationCore.csproj.CoreCompileInputs.cache
+/Users/lbq/Projects/MovieShop/ApplicationCore/obj/Debug/net5.0/ApplicationCore.dll
+/Users/lbq/Projects/MovieShop/ApplicationCore/obj/Debug/net5.0/ref/ApplicationCore.dll
+/Users/lbq/Projects/MovieShop/ApplicationCore/obj/Debug/net5.0/ApplicationCore.pdb
