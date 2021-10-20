@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MovieShopMVC
 {
@@ -23,7 +25,14 @@ namespace MovieShopMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // IOC
             services.AddControllersWithViews();
+            //services.AddScoped<IMovieService, MovieService>();
+
+            //inject connection string from appsetting.json to MovieDbContext
+            services.AddDbContext<MovieShopDbContext>(
+                options => options.UseSqlServer(Configuration.GetConnectionString("MovieShopDbConnection"))
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
