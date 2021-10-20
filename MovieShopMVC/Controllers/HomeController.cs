@@ -7,18 +7,20 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using ApplicationCore.Models;
+using ApplicationCore.ServiceInterfaces;
 using Infrastructure.Services;
 
 namespace MovieShopMVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private IMovieService _movieService;
+        public HomeController(IMovieService movieService)
         {
-            _logger = logger;
+            _movieService = new MovieService();
         }
+
+
 
         //Routing http://localhost/home/index
         //by default it's get
