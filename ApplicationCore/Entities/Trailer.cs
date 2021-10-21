@@ -8,23 +8,19 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.Entities
 {
-    [Table("Cast")]
-    public class Cast
+    [Table("Trailer")]
+    public class Trailer
     {
         public int Id { get; set; }
-       
-        [MaxLength(128)]
-        public string Name { get; set; }
-
-        public string Gender { get; set; }
-
-        public string TmdbUrl { get; set; }
 
         [MaxLength(2084)]
-        public string ProfilePath { get; set; }
+        public string TrailerUrl { get; set; }
+        [MaxLength(2084)]
+        public string Name { get; set; }
 
-        public ICollection<MovieCast> Movies { get; set; }
+        public int MovieId { get; set; }
+
+        // navigation property
+        public Movie Movie { get; set; }
     }
 }
-
-

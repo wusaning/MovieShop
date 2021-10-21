@@ -8,15 +8,17 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.Entities
 {
-    [Table("Genre")]
-    public class Genre
+    [Table("Role")]
+    public class Role
     {
-        public int Id { get; set; } // attribute named 'Id' will be automatically set PK by default of migration
+        public int Id { get; set; }
 
-        [MaxLength(64)]
+        [MaxLength(20)]
         public string Name { get; set; }
 
-        public ICollection<MovieGenre> Movies{ get; set; }
+
+        //NP
+        public ICollection<UserRole> Users { get; set; }
 
     }
 }
