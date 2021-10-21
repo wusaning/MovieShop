@@ -14,10 +14,13 @@ namespace MovieShopMVC.Controllers
 {
     public class HomeController : Controller
     {
-        private IMovieService _movieService;
+
+        private readonly IMovieService _movieService;
+        //private readonly int x;
         public HomeController(IMovieService movieService)
         {
-            _movieService = new MovieService();
+            //x = 40;
+            _movieService = movieService;
         }
 
 
@@ -25,16 +28,28 @@ namespace MovieShopMVC.Controllers
         //Routing http://localhost/home/index
         //by default it's get
         [HttpGet]
+        //public IActionResult Index()
+        //{
+        //    // call movie service class to get list of movie card models
+        //    MovieService service = new MovieService();
+        //    var movieCards = service.GetTop30RevenueMovies();
+
+        //    //passing data from controller to view: strongly typed; ViewBag and ViewData
+
+        //    ViewBag.PageTitle = "Top Revenue Movies";
+        //    ViewData["xxx"] = "testdata";
+        //    return View(movieCards);
+        //}
+
         public IActionResult Index()
         {
             // call movie service class to get list of movie card models
-            MovieService service = new MovieService();
-            var movieCards = service.GetTop30RevenueMovies();
 
-            //passing data from controller to view: strongly typed; ViewBag and ViewData
-
-            ViewBag.PageTitle = "Top Revenue Movies";
-            ViewData["xxx"] = "testdata";
+            var movieCards = _movieService.GetTop30RevenueMovies();
+            // passing data from controler to view, strongly typed models
+            // ViewBag and ViewData
+            //  ViewBag.PageTitle = "Top Revenue Movies";
+            // ViewData["xyz"] = "test data";
             return View(movieCards);
         }
 
