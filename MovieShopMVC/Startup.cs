@@ -10,6 +10,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using ApplicationCore.RepositoryInterfaces;
+using Infrastructure.Repositories;
+using ApplicationCore.ServiceInterfaces;
+using Infrastructure.Services;
 
 namespace MovieShopMVC
 {
@@ -27,8 +31,9 @@ namespace MovieShopMVC
         {
             // IOC
             services.AddControllersWithViews();
-            //services.AddScoped<IMovieService, MovieService>();
-
+            services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
+            
             //inject connection string from appsetting.json to MovieDbContext
             services.AddDbContext<MovieShopDbContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("MovieShopDbConnection"))
